@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:padding="5dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:padding="10dp"
+        android:background="#CECECE"
+        android:layout_height="wrap_content">
+
+
+        <EditText
+            android:id="@+id/url_Bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="9"
+            android:background="#ABABAB"
+            android:backgroundTint="#ABABAB"
+            android:drawableLeft="@drawable/ic_baseline_search_24"
+            android:ems="10"
+            android:hint="Enter URL"
+            android:inputType="textPersonName"
+            android:maxLines="1"
+            android:minHeight="52dp" />
+
+        <Button
+            android:id="@+id/search_Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="10dp"
+            android:layout_weight="1"
+            android:text="Go"
+            android:textColor="@android:color/white" />
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ProgressBar
+            android:id="@+id/loading_Phase"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"/>
+
+        <WebView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/web_View"
+            android:visibility="gone"/>
+    </RelativeLayout>
+</LinearLayout>
